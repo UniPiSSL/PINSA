@@ -1,0 +1,28 @@
+test:
+  name: GetPolicyholderHistory Benchmark
+  description: Benchmark GetPolicyholderHistory function
+  workers:
+    type: local
+    number: 2
+  rounds:
+    - label: getPolicyholderHistory
+      txNumber: 5
+      rateControl:
+        type: fixed-load
+        opts:
+          tps: 1
+      workload:
+        module: ./workloads/getPolicyholderHistory.js
+        arguments:
+          contractId: basic
+          policyholderID: PolBench001
+          insurancecompanyID: InsBench001
+monitors:
+  resource:
+    - module: process
+      options:
+        interval: 3
+        processes:
+          - command: node
+            arguments: []
+            multiOutput: avg

@@ -1,0 +1,175 @@
+test:
+  name: Update Policyholder Benchmark
+  description: Benchmark for updating existing policyholders
+  workers:
+    number: 8
+    type: local
+  rounds:
+    - label: round1
+      description: Update 100 transactions
+      txNumber: 100
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 10
+      workload:
+        module: workloads/updatePolicyholder.js
+        arguments:
+          Risklevel: "High"
+          Totalmoneyrisk: 500000
+
+    - label: round2
+      description: Update 200 transactions
+      txNumber: 200
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 20
+      workload:
+        module: workloads/updatePolicyholder.js
+        arguments:
+          Risklevel: "High"
+          Totalmoneyrisk: 500000
+
+    - label: round3
+      description: Update 300 transactions
+      txNumber: 300
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 30
+      workload:
+        module: workloads/updatePolicyholder.js
+        arguments:
+          Risklevel: "High"
+          Totalmoneyrisk: 500000
+
+    - label: round4
+      description: Update 400 transactions
+      txNumber: 400
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 40
+      workload:
+        module: workloads/updatePolicyholder.js
+        arguments:
+          Risklevel: "High"
+          Totalmoneyrisk: 500000
+
+    - label: round5
+      description: Update 500 transactions
+      txNumber: 500
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: workloads/updatePolicyholder.js
+        arguments:
+          Risklevel: "High"
+          Totalmoneyrisk: 500000
+
+    - label: round6
+      description: Update 600 transactions
+      txNumber: 600
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 60
+      workload:
+        module: workloads/updatePolicyholder.js
+        arguments:
+          Risklevel: "High"
+          Totalmoneyrisk: 500000
+
+    - label: round7
+      description: Update 700 transactions
+      txNumber: 700
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 70
+      workload:
+        module: workloads/updatePolicyholder.js
+        arguments:
+          Risklevel: "High"
+          Totalmoneyrisk: 500000
+
+    - label: round8
+      description: Update 800 transactions
+      txNumber: 800
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 80
+      workload:
+        module: workloads/updatePolicyholder.js
+        arguments:
+          Risklevel: "High"
+          Totalmoneyrisk: 500000
+
+    - label: round9
+      description: Update 900 transactions
+      txNumber: 900
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 90
+      workload:
+        module: workloads/updatePolicyholder.js
+        arguments:
+          Risklevel: "High"
+          Totalmoneyrisk: 500000
+
+    - label: round10
+      description: Update 1000 transactions
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 100
+      workload:
+        module: workloads/updatePolicyholder.js
+        arguments:
+          Risklevel: "High"
+          Totalmoneyrisk: 500000
+
+    - label: round11
+      description: Update 1500 transactions
+      txNumber: 1500
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 150
+      workload:
+        module: workloads/updatePolicyholder.js
+        arguments:
+          Risklevel: "High"
+          Totalmoneyrisk: 500000
+
+    - label: round12
+      description: Update 2000 transactions
+      txNumber: 2000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 200
+      workload:
+        module: workloads/updatePolicyholder.js
+        arguments:
+          Risklevel: "High"
+          Totalmoneyrisk: 500000
+monitors:
+  resource:
+    - module: process
+      options:
+        interval: 3
+        processes:
+          - command: node
+            arguments: []
+            multiOutput: avg
+        metrics:
+          - cpu
+          - memory
+          - memoryRss

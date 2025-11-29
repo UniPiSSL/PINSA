@@ -1,0 +1,26 @@
+test:
+  name: GetAllPolicyholders Benchmark
+  description: Benchmark GetAllPolicyholders function
+  workers:
+    type: local
+    number: 2
+  rounds:
+    - label: getAllPolicyholders
+      txNumber: 5
+      rateControl:
+        type: fixed-load
+        opts:
+          tps: 1
+      workload:
+        module: ./workloads/getAllPolicyholders.js
+        arguments:
+          contractId: basic
+monitors:
+  resource:
+    - module: process
+      options:
+        interval: 3
+        processes:
+          - command: node
+            arguments: []
+            multiOutput: avg

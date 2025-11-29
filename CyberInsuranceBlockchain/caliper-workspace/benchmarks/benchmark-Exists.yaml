@@ -1,0 +1,151 @@
+test:
+  name: Check PolicyholderExists Benchmark
+  description: Benchmark for PolicyholderExists query
+  workers:
+    number: 8
+    type: local
+  rounds:
+    - label: round1
+      description: 100 transactions
+      txNumber: 100
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 10
+      workload:
+        module: workloads/policyholderExists.js
+        arguments: {}
+
+    - label: round2
+      description: 200 transactions
+      txNumber: 200
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 20
+      workload:
+        module: workloads/policyholderExists.js
+        arguments: {}
+
+    - label: round3
+      description: 300 transactions
+      txNumber: 300
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 30
+      workload:
+        module: workloads/policyholderExists.js
+        arguments: {}
+
+    - label: round4
+      description: 400 transactions
+      txNumber: 400
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 40
+      workload:
+        module: workloads/policyholderExists.js
+        arguments: {}
+
+    - label: round5
+      description: 500 transactions
+      txNumber: 500
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: workloads/policyholderExists.js
+        arguments: {}
+
+    - label: round6
+      description: 600 transactions
+      txNumber: 600
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 60
+      workload:
+        module: workloads/policyholderExists.js
+        arguments: {}
+
+    - label: round7
+      description: 700 transactions
+      txNumber: 700
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 70
+      workload:
+        module: workloads/policyholderExists.js
+        arguments: {}
+
+    - label: round8
+      description: 800 transactions
+      txNumber: 800
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 80
+      workload:
+        module: workloads/policyholderExists.js
+        arguments: {}
+
+    - label: round9
+      description: 900 transactions
+      txNumber: 900
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 90
+      workload:
+        module: workloads/policyholderExists.js
+        arguments: {}
+
+    - label: round10
+      description: 1000 transactions
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 100
+      workload:
+        module: workloads/policyholderExists.js
+        arguments: {}
+
+    - label: round11
+      description: 1500 transactions
+      txNumber: 1500
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 150
+      workload:
+        module: workloads/policyholderExists.js
+        arguments: {}
+
+    - label: round12
+      description: 2000 transactions
+      txNumber: 2000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 200
+      workload:
+        module: workloads/policyholderExists.js
+        arguments: {}
+monitors:
+  resource:
+    - module: process
+      options:
+        interval: 3
+        processes:
+          - command: node
+            arguments: []
+            multiOutput: avg
+        metrics:
+          - cpu
+          - memory
+          - memoryRss

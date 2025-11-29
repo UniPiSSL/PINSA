@@ -1,0 +1,36 @@
+name: "Caliper Gateway Network"
+version: "2.0.0"
+
+caliper:
+  blockchain: fabric
+
+channels:
+  - channelName: channel1
+    contracts:
+      - id: basic
+        version: 1.0
+
+organizations:
+  - mspid: Org1MSP
+    identities:
+      certificates:
+        - name: "User1"
+          clientPrivateKey:
+            path: "../fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/516d92d4c950a5d391835acc3160df66c7aba6dd41fa0a85c308c9caf384b17f_sk"
+          clientSignedCert:
+            path: "../fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/cert.pem"
+    connectionProfile:
+      path: "../fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/connection-org1.yaml"
+      discover: true
+
+  - mspid: Org2MSP
+    identities:
+      certificates:
+        - name: "User2"
+          clientPrivateKey:
+            path: "../fabric-samples/test-network/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/8b160505d36cd2887f00b98b1d1da9a22497a2e80d0d5ad23c42a7bce051aaa5_sk"
+          clientSignedCert:
+            path: "../fabric-samples/test-network/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/cert.pem"
+    connectionProfile:
+      path: "../fabric-samples/test-network/organizations/peerOrganizations/org2.example.com/connection-org2.yaml"
+      discover: true

@@ -1,0 +1,158 @@
+./demo/runners/output101.txt:[J[0m[?7h[?1l[0m[?7h[0mPolicyholder | [0;31m  File "/home/indy/aries_cloudagent/indy/credx/holder.py", line 535, in create_presentation
+./demo/runners/output101.txt:[0m[0m[J[0m[?7h[?1l[0m[?7h[0mPolicyholder | [0;31m  File "/home/indy/.pyenv/versions/3.6.13/lib/python3.6/site-packages/indy_credx/bindings.py", line 685, in create_presentation
+./aries_cloudagent/vc/vc_ld/tests/test_vc_ld.py:    create_presentation,
+./aries_cloudagent/vc/vc_ld/tests/test_vc_ld.py:    async def test_create_presentation(self):
+./aries_cloudagent/vc/vc_ld/tests/test_vc_ld.py:            await create_presentation(credentials=[credential])
+./aries_cloudagent/vc/vc_ld/tests/test_vc_ld.py:    async def test_create_presentation_x_invalid_credential_structures(self):
+./aries_cloudagent/vc/vc_ld/tests/test_vc_ld.py:        unsigned_presentation = await create_presentation(
+./aries_cloudagent/vc/vc_ld/tests/test_vc_ld.py:        assert "id" in await create_presentation(
+./aries_cloudagent/vc/vc_ld/tests/test_vc_ld.py:        unsigned_presentation = await create_presentation(
+./aries_cloudagent/vc/vc_ld/prove.py:async def create_presentation(
+./aries_cloudagent/vc/vc_ld/__init__.py:from .prove import create_presentation, sign_presentation, derive_credential
+./aries_cloudagent/vc/vc_ld/__init__.py:    "create_presentation",
+./aries_cloudagent/protocols/present_proof/dif/tests/test_pres_exch_handler.py:            "create_presentation",
+./aries_cloudagent/protocols/present_proof/dif/tests/test_pres_exch_handler.py:            "create_presentation",
+./aries_cloudagent/protocols/present_proof/dif/tests/test_pres_exch_handler.py:            "create_presentation",
+./aries_cloudagent/protocols/present_proof/dif/pres_exch_handler.py:from ....vc.vc_ld.prove import sign_presentation, create_presentation, derive_credential
+./aries_cloudagent/protocols/present_proof/dif/pres_exch_handler.py:                    vp = await create_presentation(credentials=applicable_creds_list)
+./aries_cloudagent/protocols/present_proof/dif/pres_exch_handler.py:                    vp = await create_presentation(credentials=filtered_creds_list)
+./aries_cloudagent/protocols/present_proof/dif/pres_exch_handler.py:                        vp = await create_presentation(
+./aries_cloudagent/protocols/present_proof/dif/pres_exch_handler.py:                        vp = await create_presentation(credentials=filtered_creds_list)
+./aries_cloudagent/protocols/present_proof/dif/pres_exch_handler.py:                    vp = await create_presentation(credentials=applicable_creds_list)
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_manager.py:        self.holder.create_presentation = async_mock.CoroutineMock(return_value="{}")
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_manager.py:    async def test_create_presentation(self):
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_manager.py:            (exchange_out, pres_msg) = await self.manager.create_presentation(
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_manager.py:    async def test_create_presentation_proof_req_non_revoc_interval_none(self):
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_manager.py:            (exchange_out, pres_msg) = await self.manager.create_presentation(
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_manager.py:    async def test_create_presentation_self_asserted(self):
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_manager.py:            (exchange_out, pres_msg) = await self.manager.create_presentation(
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_manager.py:    async def test_create_presentation_no_revocation(self):
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_manager.py:        self.holder.create_presentation = async_mock.CoroutineMock(return_value="{}")
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_manager.py:            (exchange_out, pres_msg) = await self.manager.create_presentation(
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_manager.py:            await self.manager.create_presentation(exchange_in, req_creds)
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_manager.py:    async def test_create_presentation_bad_revoc_state(self):
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_manager.py:        self.holder.create_presentation = async_mock.CoroutineMock(return_value="{}")
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_manager.py:                await self.manager.create_presentation(exchange_in, req_creds)
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_manager.py:    async def test_create_presentation_multi_matching_proposal_creds_names(self):
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_manager.py:        self.holder.create_presentation = async_mock.CoroutineMock(return_value="{}")
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_manager.py:            (exchange_out, pres_msg) = await self.manager.create_presentation(
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_routes.py:                create_presentation=async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v1_0/tests/test_routes.py:                create_presentation=async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v1_0/routes.py:        ) = await presentation_manager.create_presentation(
+./aries_cloudagent/protocols/present_proof/v1_0/manager.py:    async def create_presentation(
+./aries_cloudagent/protocols/present_proof/v1_0/handlers/tests/test_presentation_request_handler.py:            mock_pres_mgr.return_value.create_presentation = async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v1_0/handlers/tests/test_presentation_request_handler.py:            mock_pres_mgr.return_value.create_presentation.assert_called_once()
+./aries_cloudagent/protocols/present_proof/v1_0/handlers/tests/test_presentation_request_handler.py:            mock_pres_mgr.return_value.create_presentation = async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v1_0/handlers/tests/test_presentation_request_handler.py:            mock_pres_mgr.return_value.create_presentation = async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v1_0/handlers/tests/test_presentation_request_handler.py:            mock_pres_mgr.return_value.create_presentation.assert_called_once()
+./aries_cloudagent/protocols/present_proof/v1_0/handlers/tests/test_presentation_request_handler.py:            mock_pres_mgr.return_value.create_presentation = async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v1_0/handlers/tests/test_presentation_request_handler.py:            mock_pres_mgr.return_value.create_presentation.assert_not_called()
+./aries_cloudagent/protocols/present_proof/v1_0/handlers/tests/test_presentation_request_handler.py:            mock_pres_mgr.return_value.create_presentation = async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v1_0/handlers/tests/test_presentation_request_handler.py:            mock_pres_mgr.return_value.create_presentation.assert_called_once()
+./aries_cloudagent/protocols/present_proof/v1_0/handlers/tests/test_presentation_request_handler.py:            mock_pres_mgr.return_value.create_presentation = async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v1_0/handlers/tests/test_presentation_request_handler.py:            mock_pres_mgr.return_value.create_presentation.assert_called_once()
+./aries_cloudagent/protocols/present_proof/v1_0/handlers/tests/test_presentation_request_handler.py:            mock_pres_mgr.return_value.create_presentation = async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v1_0/handlers/tests/test_presentation_request_handler.py:            mock_pres_mgr.return_value.create_presentation.assert_called_once()
+./aries_cloudagent/protocols/present_proof/v1_0/handlers/tests/test_presentation_request_handler.py:            mock_pres_mgr.return_value.create_presentation = async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v1_0/handlers/tests/test_presentation_request_handler.py:            mock_pres_mgr.return_value.create_presentation.assert_not_called()
+./aries_cloudagent/protocols/present_proof/v1_0/handlers/presentation_request_handler.py:                ) = await presentation_manager.create_presentation(
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    create_presentation,
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    async def test_create_pres(self):
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:            output = await self.handler.create_pres(record, {})
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    async def test_create_pres_pd_schema_uri(self):
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:            output = await self.handler.create_pres(record, request_data)
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    async def test_create_pres_prover_proof_spec(self):
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:            output = await self.handler.create_pres(record, request_data)
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    async def test_create_pres_prover_proof_spec_with_record_ids(self):
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:            output = await self.handler.create_pres(record, request_data)
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    async def test_create_pres_prover_proof_spec_with_reveal_doc(self):
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:            output = await self.handler.create_pres(record, request_data)
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    async def test_create_pres_one_of_filter(self):
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:            output = await self.handler.create_pres(record, request_data)
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    async def test_create_pres_no_challenge(self):
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:            output = await self.handler.create_pres(record, request_data)
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    async def test_create_pres_storage_not_found(self):
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:            await self.handler.create_pres(record)
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    async def test_create_pres_pd_claim_format_ed255(self):
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:            output = await self.handler.create_pres(record, {})
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    async def test_create_pres_pd_claim_format_bls12381g2(self):
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:            output = await self.handler.create_pres(record, {})
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    async def test_create_pres_cred_limit_disclosure_no_bbs(self):
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:            await self.handler.create_pres(record)
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    async def test_create_pres_cred_claim_format_single_ldp_vp_error(self):
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:            await self.handler.create_pres(record)
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    async def test_create_pres_cred_claim_format_double_ldp_vp_error(self):
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:            await self.handler.create_pres(record)
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    async def test_create_pres_cred_no_tag_query(self):
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:            output = await self.handler.create_pres(record, {})
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    async def test_create_pres_cred_claim_format_no_ldp_vp(self):
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:            await self.handler.create_pres(record)
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    async def test_create_pres_catch_typeerror(self):
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:        await self.handler.create_pres(record)
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:    async def test_create_pres_catch_diferror(self):
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/tests/test_handler.py:            await self.handler.create_pres(record)
+./aries_cloudagent/protocols/present_proof/v2_0/formats/dif/handler.py:    async def create_pres(
+./aries_cloudagent/protocols/present_proof/v2_0/formats/handler.py:    async def create_pres(
+./aries_cloudagent/protocols/present_proof/v2_0/formats/indy/handler.py:    async def create_pres(
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:        self.holder.create_presentation = async_mock.CoroutineMock(return_value="{}")
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:    async def test_create_pres_no_format(self):
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:            await self.manager.create_pres(
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:    async def test_create_pres_catch_diferror(self):
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:            DIFPresFormatHandler, "create_pres", autospec=True
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:        ) as mock_create_pres:
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:            mock_create_pres.return_value = None
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:                await self.manager.create_pres(
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:    async def test_create_pres_indy(self):
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:            (px_rec_out, pres_msg) = await self.manager.create_pres(
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:    async def test_create_pres_indy_and_dif(self):
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:            DIFPresFormatHandler, "create_pres", autospec=True
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:        ) as mock_create_pres:
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:            mock_create_pres.return_value = (
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:            (px_rec_out, pres_msg) = await self.manager.create_pres(
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:    async def test_create_pres_proof_req_non_revoc_interval_none(self):
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:            (px_rec_out, pres_msg) = await self.manager.create_pres(
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:    async def test_create_pres_self_asserted(self):
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:            (px_rec_out, pres_msg) = await self.manager.create_pres(
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:    async def test_create_pres_no_revocation(self):
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:        self.holder.create_presentation = async_mock.CoroutineMock(return_value="{}")
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:            (px_rec_out, pres_msg) = await self.manager.create_pres(
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:            await self.manager.create_pres(px_rec_in, request_data)
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:    async def test_create_pres_bad_revoc_state(self):
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:        self.holder.create_presentation = async_mock.CoroutineMock(return_value="{}")
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:                await self.manager.create_pres(px_rec_in, request_data)
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:    async def test_create_pres_multi_matching_proposal_creds_names(self):
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:        self.holder.create_presentation = async_mock.CoroutineMock(return_value="{}")
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:            (px_rec_out, pres_msg) = await self.manager.create_pres(
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_manager.py:                (px_rec_out, pres_msg) = await self.manager.create_pres(
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_routes.py:                create_pres=async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_routes.py:                create_pres=async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_routes.py:                create_pres=async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v2_0/tests/test_routes.py:                create_pres=async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v2_0/routes.py:        pres_ex_record, pres_message = await pres_manager.create_pres(
+./aries_cloudagent/protocols/present_proof/v2_0/manager.py:    async def create_pres(
+./aries_cloudagent/protocols/present_proof/v2_0/manager.py:                pres_tuple = await pres_exch_format.handler(self._profile).create_pres(
+./aries_cloudagent/protocols/present_proof/v2_0/handlers/tests/test_pres_request_handler.py:            mock_pres_mgr.return_value.create_pres = async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v2_0/handlers/tests/test_pres_request_handler.py:            mock_pres_mgr.return_value.create_pres = async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v2_0/handlers/tests/test_pres_request_handler.py:            mock_pres_mgr.return_value.create_pres.assert_called_once()
+./aries_cloudagent/protocols/present_proof/v2_0/handlers/tests/test_pres_request_handler.py:            mock_pres_mgr.return_value.create_pres = async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v2_0/handlers/tests/test_pres_request_handler.py:            mock_pres_mgr.return_value.create_pres.assert_called_once()
+./aries_cloudagent/protocols/present_proof/v2_0/handlers/tests/test_pres_request_handler.py:            mock_pres_mgr.return_value.create_pres = async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v2_0/handlers/tests/test_pres_request_handler.py:            mock_pres_mgr.return_value.create_pres.assert_called_once()
+./aries_cloudagent/protocols/present_proof/v2_0/handlers/tests/test_pres_request_handler.py:            mock_pres_mgr.return_value.create_pres = async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v2_0/handlers/tests/test_pres_request_handler.py:            mock_pres_mgr.return_value.create_pres = async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v2_0/handlers/tests/test_pres_request_handler.py:            mock_pres_mgr.return_value.create_pres.assert_called_once()
+./aries_cloudagent/protocols/present_proof/v2_0/handlers/tests/test_pres_request_handler.py:            mock_pres_mgr.return_value.create_pres = async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v2_0/handlers/tests/test_pres_request_handler.py:            mock_pres_mgr.return_value.create_pres.assert_called_once()
+./aries_cloudagent/protocols/present_proof/v2_0/handlers/tests/test_pres_request_handler.py:            mock_pres_mgr.return_value.create_pres = async_mock.CoroutineMock(
+./aries_cloudagent/protocols/present_proof/v2_0/handlers/tests/test_pres_request_handler.py:            mock_pres_mgr.return_value.create_pres.assert_called_once()
+./aries_cloudagent/protocols/present_proof/v2_0/handlers/pres_request_handler.py:                (pres_ex_record, pres_message) = await pres_manager.create_pres(
+./aries_cloudagent/protocols/present_proof/indy/pres_exch_handler.py:        indy_proof_json = await holder.create_presentation(
+./aries_cloudagent/indy/sdk/tests/test_holder.py:    async def test_create_presentation(self, mock_create_proof):
+./aries_cloudagent/indy/sdk/tests/test_holder.py:        presentation_json = await self.holder.create_presentation(
+./aries_cloudagent/indy/sdk/tests/test_holder.py:    async def test_create_presentation_restr_attr_mismatch_x(self):
+./aries_cloudagent/indy/sdk/tests/test_holder.py:                await self.holder.create_presentation(
+./aries_cloudagent/indy/sdk/holder.py:    async def create_presentation(
+./aries_cloudagent/indy/holder.py:    async def create_presentation(
+./aries_cloudagent/indy/credx/tests/test_cred_issuance.py:        pres_json = await self.holder.create_presentation(
+./aries_cloudagent/indy/credx/tests/test_cred_issuance.py:        pres_json = await self.holder.create_presentation(
+./aries_cloudagent/indy/credx/holder.py:    async def create_presentation(

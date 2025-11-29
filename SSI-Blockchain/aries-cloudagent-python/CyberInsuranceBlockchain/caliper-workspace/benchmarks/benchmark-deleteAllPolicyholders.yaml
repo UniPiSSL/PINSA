@@ -1,0 +1,28 @@
+test:
+  name: DeleteAllPolicyholders Benchmark
+  description: Benchmark DeleteAllPolicyholders function
+  workers:
+    type: local
+    number: 2
+
+  rounds:
+    - label: deleteAllPolicyholders
+      txNumber: 2
+      rateControl:
+        type: fixed-load
+        opts:
+          tps: 1
+      workload:
+        module: ./workloads/deleteAllPolicyholders.js
+        arguments:
+          contractId: basic
+
+monitors:
+  resource:
+    - module: process
+      options:
+        interval: 3
+        processes:
+          - command: node
+            arguments: []
+            multiOutput: avg

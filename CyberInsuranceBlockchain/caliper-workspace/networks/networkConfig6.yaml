@@ -1,0 +1,83 @@
+name: Caliper test 4orgs
+version: "2.0.0"
+
+caliper:
+  blockchain: fabric
+
+channels:
+  - channelName: channel1
+    contracts:
+      - id: basic
+
+organizations:
+  - mspid: Org1MSP
+    identities:
+      certificates:
+        - name: "User1"
+          clientPrivateKey:
+            path: "../fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/9d749ab4af7a3f2702a567646d78fe6a49647c1a487905728763bc5aa4133a58_sk"
+          clientSignedCert:
+            path: "../fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/cert.pem"
+    connectionProfile:
+      path: "../fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/connection-org1.yaml"
+      discover: true
+
+  - mspid: Org2MSP
+    identities:
+      certificates:
+        - name: "User1"
+          clientPrivateKey:
+            path: "../fabric-samples/test-network/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/456cc678251535249fad73416f310c3e6f5246cc4548a87761c6891231ed6ae5_sk"
+          clientSignedCert:
+            path: "../fabric-samples/test-network/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/cert.pem"
+    connectionProfile:
+      path: "../fabric-samples/test-network/organizations/peerOrganizations/org2.example.com/connection-org2.yaml"
+      discover: true
+
+  - mspid: Org3MSP
+    identities:
+      certificates:
+        - name: "User1"
+          clientPrivateKey:
+            path: "../fabric-samples/test-network/organizations/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp/keystore/priv_sk"
+          clientSignedCert:
+            path: "../fabric-samples/test-network/organizations/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp/signcerts/Admin@org3.example.com-cert.pem"
+    connectionProfile:
+      path: "../fabric-samples/test-network/organizations/peerOrganizations/org3.example.com/connection-org3.yaml"
+      discover: true
+
+  - mspid: Org4MSP
+    identities:
+      certificates:
+        - name: "User1"
+          clientPrivateKey:
+            path: "../fabric-samples/test-network/organizations/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp/keystore/priv_sk"
+          clientSignedCert:
+            path: "../fabric-samples/test-network/organizations/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp/signcerts/Admin@org4.example.com-cert.pem"
+    connectionProfile:
+      path: "../fabric-samples/test-network/organizations/peerOrganizations/org4.example.com/connection-org4.yaml"
+      discover: true
+
+  - mspid: Org5MSP
+    identities:
+      certificates:
+        - name: "User1"
+          clientPrivateKey:
+            path: "../fabric-samples/test-network/organizations/peerOrganizations/org5.example.com/users/Admin@org5.example.com/msp/keystore/priv_sk"
+          clientSignedCert:
+            path: "../fabric-samples/test-network/organizations/peerOrganizations/org5.example.com/users/Admin@org5.example.com/msp/signcerts/Admin@org5.example.com-cert.pem"
+    connectionProfile:
+      path: "../fabric-samples/test-network/organizations/peerOrganizations/org5.example.com/connection-org5.yaml"
+      discover: true
+
+  - mspid: Org6MSP
+    identities:
+      certificates:
+        - name: "User1"
+          clientPrivateKey:
+            path: "../fabric-samples/test-network/organizations/peerOrganizations/org6.example.com/users/Admin@org6.example.com/msp/keystore/priv_sk"
+          clientSignedCert:
+            path: "../fabric-samples/test-network/organizations/peerOrganizations/org6.example.com/users/Admin@org6.example.com/msp/signcerts/Admin@org6.example.com-cert.pem"
+    connectionProfile:
+      path: "../fabric-samples/test-network/organizations/peerOrganizations/org6.example.com/connection-org6.yaml"
+      discover: true

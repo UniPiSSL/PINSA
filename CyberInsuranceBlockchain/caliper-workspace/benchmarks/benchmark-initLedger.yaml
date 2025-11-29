@@ -1,0 +1,28 @@
+test:
+  name: InitLedger Benchmark
+  description: Benchmark InitLedger function
+  workers:
+    type: local
+    number: 2
+
+  rounds:
+    - label: initLedger
+      txNumber: 5
+      rateControl:
+        type: fixed-load
+        opts:
+          tps: 1
+      workload:
+        module: ./workloads/initLedger.js
+        arguments:
+          contractId: basic
+
+monitors:
+  resource:
+    - module: process
+      options:
+        interval: 3
+        processes:
+          - command: node
+            arguments: caliper
+            multiOutput: avg

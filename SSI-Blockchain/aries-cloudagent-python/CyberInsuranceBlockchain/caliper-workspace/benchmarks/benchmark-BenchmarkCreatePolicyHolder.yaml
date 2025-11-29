@@ -1,0 +1,282 @@
+# Caliper benchmark configuration for Insurance chaincode (Caliper v0.4.2)
+
+test:
+  name: insurance-full-benchmark
+  description: Full benchmark for insurance chaincode operations
+  workers:
+    number: 8 # Number of worker threads
+
+  rounds:
+    # Round 1: 100 transactions
+    - label: CreatePolicyholder-100
+      description: Create 100 new policyholders
+      txNumber: 100
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: ./workloads/createPolicyholder.js
+        arguments:
+          policyholderID: PolX
+          insurancecompanyID: InsX
+          premium: 100000
+          limit: 1000000
+          deductible: 10000
+          startdate: "2024-01-01"
+          enddate: "2025-01-01"
+          coverages: legalaction-hacker
+          obligations: penetrationtests,stafftraining,backup-9,8,7
+          controls: penetrationtests,stafftraining,backup-9,8,7
+
+    # Round 2: 200 transactions
+    - label: CreatePolicyholder-200
+      description: Create 200 new policyholders
+      txNumber: 200
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: ./workloads/createPolicyholder.js
+        arguments:
+          policyholderID: PolX
+          insurancecompanyID: InsX
+          premium: 100000
+          limit: 1000000
+          deductible: 10000
+          startdate: "2024-01-01"
+          enddate: "2025-01-01"
+          coverages: legalaction-hacker
+          obligations: penetrationtests,stafftraining,backup-9,8,7
+          controls: penetrationtests,stafftraining,backup-9,8,7
+
+    # Round 3: 300 transactions
+    - label: CreatePolicyholder-300
+      description: Create 300 new policyholders
+      txNumber: 300
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: ./workloads/createPolicyholder.js
+        arguments:
+          policyholderID: PolX
+          insurancecompanyID: InsX
+          premium: 100000
+          limit: 1000000
+          deductible: 10000
+          startdate: "2024-01-01"
+          enddate: "2025-01-01"
+          coverages: legalaction-hacker
+          obligations: penetrationtests,stafftraining,backup-9,8,7
+          controls: penetrationtests,stafftraining,backup-9,8,7
+
+    # Round 4: 400 transactions
+    - label: CreatePolicyholder-400
+      description: Create 400 new policyholders
+      txNumber: 400
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: ./workloads/createPolicyholder.js
+        arguments:
+          policyholderID: PolX
+          insurancecompanyID: InsX
+          premium: 100000
+          limit: 1000000
+          deductible: 10000
+          startdate: "2024-01-01"
+          enddate: "2025-01-01"
+          coverages: legalaction-hacker
+          obligations: penetrationtests,stafftraining,backup-9,8,7
+          controls: penetrationtests,stafftraining,backup-9,8,7
+
+    # Round 5: 500 transactions
+    - label: CreatePolicyholder-500
+      description: Create 500 new policyholders
+      txNumber: 500
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: ./workloads/createPolicyholder.js
+        arguments:
+          policyholderID: PolX
+          insurancecompanyID: InsX
+          premium: 100000
+          limit: 1000000
+          deductible: 10000
+          startdate: "2024-01-01"
+          enddate: "2025-01-01"
+          coverages: legalaction-hacker
+          obligations: penetrationtests,stafftraining,backup-9,8,7
+          controls: penetrationtests,stafftraining,backup-9,8,7
+
+    # Round 6: 600 transactions
+    - label: CreatePolicyholder-600
+      description: Create 600 new policyholders
+      txNumber: 600
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: ./workloads/createPolicyholder.js
+        arguments:
+          policyholderID: PolX
+          insurancecompanyID: InsX
+          premium: 100000
+          limit: 1000000
+          deductible: 10000
+          startdate: "2024-01-01"
+          enddate: "2025-01-01"
+          coverages: legalaction-hacker
+          obligations: penetrationtests,stafftraining,backup-9,8,7
+          controls: penetrationtests,stafftraining,backup-9,8,7
+
+    # Round 7: 700 transactions
+    - label: CreatePolicyholder-700
+      description: Create 700 new policyholders
+      txNumber: 700
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: ./workloads/createPolicyholder.js
+        arguments:
+          policyholderID: PolX
+          insurancecompanyID: InsX
+          premium: 100000
+          limit: 1000000
+          deductible: 10000
+          startdate: "2024-01-01"
+          enddate: "2025-01-01"
+          coverages: legalaction-hacker
+          obligations: penetrationtests,stafftraining,backup-9,8,7
+          controls: penetrationtests,stafftraining,backup-9,8,7
+
+    # Round 8: 800 transactions
+    - label: CreatePolicyholder-800
+      description: Create 800 new policyholders
+      txNumber: 800
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: ./workloads/createPolicyholder.js
+        arguments:
+          policyholderID: PolX
+          insurancecompanyID: InsX
+          premium: 100000
+          limit: 1000000
+          deductible: 10000
+          startdate: "2024-01-01"
+          enddate: "2025-01-01"
+          coverages: legalaction-hacker
+          obligations: penetrationtests,stafftraining,backup-9,8,7
+          controls: penetrationtests,stafftraining,backup-9,8,7
+
+    # Round 9: 900 transactions
+    - label: CreatePolicyholder-900
+      description: Create 900 new policyholders
+      txNumber: 900
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: ./workloads/createPolicyholder.js
+        arguments:
+          policyholderID: PolX
+          insurancecompanyID: InsX
+          premium: 100000
+          limit: 1000000
+          deductible: 10000
+          startdate: "2024-01-01"
+          enddate: "2025-01-01"
+          coverages: legalaction-hacker
+          obligations: penetrationtests,stafftraining,backup-9,8,7
+          controls: penetrationtests,stafftraining,backup-9,8,7
+
+    # Round 10: 1000 transactions
+    - label: CreatePolicyholder-1000
+      description: Create 1000 new policyholders
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: ./workloads/createPolicyholder.js
+        arguments:
+          policyholderID: PolX
+          insurancecompanyID: InsX
+          premium: 100000
+          limit: 1000000
+          deductible: 10000
+          startdate: "2024-01-01"
+          enddate: "2025-01-01"
+          coverages: legalaction-hacker
+          obligations: penetrationtests,stafftraining,backup-9,8,7
+          controls: penetrationtests,stafftraining,backup-9,8,7
+
+    # Round 11: 1500 transactions
+    - label: CreatePolicyholder-1500
+      description: Create 1500 new policyholders
+      txNumber: 1500
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: ./workloads/createPolicyholder.js
+        arguments:
+          policyholderID: PolX
+          insurancecompanyID: InsX
+          premium: 100000
+          limit: 1000000
+          deductible: 10000
+          startdate: "2024-01-01"
+          enddate: "2025-01-01"
+          coverages: legalaction-hacker
+          obligations: penetrationtests,stafftraining,backup-9,8,7
+          controls: penetrationtests,stafftraining,backup-9,8,7
+
+    # Round 12: 2000 transactions
+    - label: CreatePolicyholder-2000
+      description: Create 2000 new policyholders
+      txNumber: 2000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: ./workloads/createPolicyholder.js
+        arguments:
+          policyholderID: PolX
+          insurancecompanyID: InsX
+          premium: 100000
+          limit: 1000000
+          deductible: 10000
+          startdate: "2024-01-01"
+          enddate: "2025-01-01"
+          coverages: legalaction-hacker
+          obligations: penetrationtests,stafftraining,backup-9,8,7
+          controls: penetrationtests,stafftraining,backup-9,8,7
+
+monitors:
+  resource:
+    - module: process
+      options:
+        interval: 3
+        processes:
+          - command: "node"
+            arguments: ["caliper"]
+            multiOutput: "avg"
